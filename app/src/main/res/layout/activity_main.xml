@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".vue.MainActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -27,14 +27,27 @@
                 android:textSize="35sp"
                 android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
-                android:text="Votre âge :"
-                android:textColor="#603791"
-                android:textSize="25sp" />
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent">
+               <TextView
+                   android:id="@+id/textView4"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="40dp"
+                   android:text="Votre âge :"
+                   android:textColor="#603791"
+                   android:textSize="25sp" />
+               <TextView
+                   android:id="@+id/tvAge"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="40dp"
+                   android:layout_marginLeft="10dp"
+                   android:text="0"
+                   android:textColor="#603791"
+                   android:textSize="25sp" />
+           </LinearLayout>
 
             <SeekBar
                 android:id="@+id/sbAge"
@@ -59,6 +72,7 @@
                 android:orientation="horizontal">
 
                 <RadioButton
+                    android:id="@+id/radioButton1"
                     android:layout_width="0dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
@@ -68,6 +82,7 @@
                     android:textSize="20sp" />
 
                 <RadioButton
+                    android:id="@+id/radioButton2"
                     android:layout_width="0dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
@@ -78,14 +93,14 @@
             </RadioGroup>
 
             <EditText
-                android:id="@+id/editTextText"
+                android:id="@+id/editText"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:background="@drawable/edittext_background"
                 android:textColor="#603a91"
                 android:ems="10"
                 android:inputType="text"
-                android:text="Valeur mesurée (en mmol/l)"
+                android:hint="Valeur mesurée (en mmol/l)"
                 android:layout_marginTop="32dp"
                 android:textSize="25sp"/>
 
@@ -100,6 +115,15 @@
                 android:layout_marginTop="45dp"
                 android:background="@drawable/rounded_corners"
                 />
+            <TextView
+                android:id="@+id/result"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="40dp"
+                android:textColor="#603791"
+                android:textSize="20sp"
+                android:textAlignment="center"/>
+
 
         </LinearLayout>
     </ScrollView>
