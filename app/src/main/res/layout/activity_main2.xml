@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".vue.MainActivity2"
+    android:padding = "20dp"
+    android:background="@drawable/home_background"
+    android:orientation="vertical">
+    <EditText
+        android:id="@+id/nomutilisateur"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Nom utilisateur"
+        android:textSize="25sp"
+        android:inputType="text"
+        />
+    <EditText
+        android:id="@+id/mdp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Mot de passe"
+        android:textSize="25sp"
+        android:layout_marginTop="32dp"
+        android:inputType="textPassword"
+        />
+    <Button
+        android:id="@+id/btnConsultation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="#220557"
+        android:text="CONSULTATION"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+</LinearLayout>
